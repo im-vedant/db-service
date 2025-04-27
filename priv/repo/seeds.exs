@@ -44,7 +44,7 @@ import Ecto.Query
 
 defmodule Seed do
   def random_alphanumeric(length \\ 20) do
-    for _ <- 1..length, into: "", do: <<Enum.random('0123456789abcdef')>>
+    for _ <- 1..length, into: "", do: <<Enum.random(~c"0123456789abcdef")>>
   end
 
   def create_user() do

@@ -5,7 +5,7 @@ defmodule Dbservice.MixProject do
     [
       app: :dbservice,
       version: "0.1.0",
-      elixir: "~> 1.12",
+      elixir: "~> 1.18.3",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers() ++ [:phoenix_swagger],
       start_permanent: Mix.env() == :prod,
@@ -33,28 +33,28 @@ defmodule Dbservice.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.6.6"},
-      {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
-      {:phoenix_live_dashboard, "~> 0.6.5"},
-      {:swoosh, "~> 1.3"},
-      {:telemetry_metrics, "~> 0.6"},
-      {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.26.0"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
-      {:phoenix_swagger, "~> 0.8"},
-      {:ex_json_schema, "~> 0.5"},
-      {:faker, "~> 0.17", only: [:test, :dev]},
-      {:ex_check, "~> 0.14.0", only: [:dev], runtime: false},
-      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
-      {:credo, ">= 0.0.0", only: [:dev], runtime: false},
-      {:dotenvy, "~> 0.8.0"},
-      {:cors_plug, "~> 3.0"},
-      {:logger_file_backend, "~> 0.0.13"},
+      {:phoenix, "~> 1.7.21"},
+      {:phoenix_ecto, "~> 4.6.3"},
+      {:ecto_sql, "~> 3.12.1"},
+      {:postgrex, "~> 0.20"},
+      {:phoenix_live_dashboard, "~> 0.8.6"},
+      {:swoosh, "~> 1.18.4"},
+      {:telemetry_metrics, "~> 1.1.0"},
+      {:telemetry_poller, "~> 1.2.0"},
+      {:gettext, "~> 0.26.2"},
+      {:jason, "~> 1.4.4"},
+      {:plug_cowboy, "~> 2.7.3"},
+      {:phoenix_swagger, "~> 0.8.3"},
+      {:ex_json_schema, "~> 0.7.1"},
+      {:faker, "~> 0.18.0", only: [:test, :dev]},
+      {:ex_check, "~> 0.16.0", only: [:dev], runtime: false},
+      {:dialyxir, "~> 1.4.5", only: [:dev], runtime: false},
+      {:credo, "~> 1.7.12", only: [:dev], runtime: false},
+      {:dotenvy, "~> 1.1.0"},
+      {:cors_plug, "~> 3.0.3"},
+      {:logger_file_backend, "~> 0.0.14"},
       {:calendar, "~> 1.0.0"},
-      {:observer_cli, "~> 1.7"}
+      {:observer_cli, "~> 1.8.3"}
     ]
   end
 

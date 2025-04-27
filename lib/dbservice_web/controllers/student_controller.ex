@@ -276,7 +276,7 @@ defmodule DbserviceWeb.StudentController do
     academic_year = params["academic_year"]
 
     # Check if the student is already enrolled in the specified batch
-    unless existing_batch_enrollment?(user_id, batch_id) do
+    if !existing_batch_enrollment?(user_id, batch_id) do
       handle_batch_enrollment(
         user_id,
         batch_id,

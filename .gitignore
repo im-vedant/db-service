@@ -30,3 +30,6 @@ dbservice-*.tar
 
 # Ignore mix.lock file
 mix.lock
+
+
+.elixir_ls
